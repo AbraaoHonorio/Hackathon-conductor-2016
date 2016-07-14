@@ -1,6 +1,6 @@
 package br.com.conducto.awy;
 
-import teste.mainWindow;
+import telas.mainWindow;
 
 public class Main{
  
