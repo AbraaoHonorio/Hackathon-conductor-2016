@@ -19,6 +19,7 @@ import java.io.File;
 //import java.awt.image.BufferedImage;
 //import java.io.File;
 import java.io.IOException;
+
 import javax.swing.UIManager;
 
 public class mainWindow extends JFrame {
@@ -42,8 +43,8 @@ public class mainWindow extends JFrame {
 		System.out.println(this.client.getCartaoNome());
 	}
 
-Tela_Cadastro f;
-Tela_Consulta C;
+		Tela_Cadastro f;
+		Tela_Consulta C;
 
 
 	/**
@@ -117,7 +118,8 @@ Tela_Consulta C;
 		btnConsult.setIcon(iconeConsult);
 		btnConsult.addMouseListener(new MouseListener() {
             public void mouseClicked(MouseEvent e) {
-            	Tela_Edit E = new Tela_Edit();
+            	///alClient.add(client);
+            	Tela_Consulta E = new Tela_Consulta(client);
     		    E.setVisible(true);
     		    E.setResizable(false);
             }
