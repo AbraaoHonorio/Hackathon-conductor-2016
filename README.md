@@ -8,8 +8,8 @@ expandir as possibilidades de interação com o usuário.
 Equipe: Awy enterprise
 
        Abraão Állysson dos Santos Honório
-       Yuri da costa gouveia
        Wellton Thyago de Souza
+       Yuri da costa gouveia
 
        
        
