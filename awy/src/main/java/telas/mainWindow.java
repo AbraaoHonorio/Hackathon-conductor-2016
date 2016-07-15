@@ -145,7 +145,7 @@ public class mainWindow extends JFrame {
 		
 		btEdit.addMouseListener(new MouseListener() {
             public void mouseClicked(MouseEvent e) {
-            	Tela_Edit E = new Tela_Edit();
+            	Tela_OP E = new Tela_OP(client);
     		    E.setVisible(true);
     		    E.setResizable(false);
             }

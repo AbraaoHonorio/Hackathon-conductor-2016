@@ -27,13 +27,10 @@ public class Tela_Cadastro extends JFrame {
 	private static final long serialVersionUID = 1L;
 	
 	private JPanel contentPane;
-	private JTextField tfNome;
-	private JTextField tfSenha;
-	private JTextField tfCvv;
-	private JTextField tfConta;
+	//private JTextField tfNome;
+	
 	private JLabel lblCadastro;
 	private JLabel lblCvv;
-	private JLabel lblConta;
 	private JButton btnNewButton;
 	JTextField textField_4;
 	private String nome;
@@ -139,7 +136,7 @@ public class Tela_Cadastro extends JFrame {
 			    client.setSenha(senha);
 			    client.setContaNome(conta);
 			    client.setCvv(cvv);
-			    Tela_Consulta c = new Tela_Consulta(client);
+			   // Tela_Consulta c = new Tela_Consulta(client);
 			    //c.setClient(client);
 			    try {
 					m = new mainWindow();

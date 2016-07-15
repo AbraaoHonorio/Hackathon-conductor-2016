@@ -22,10 +22,10 @@ public class Operation
          return conta;
 	}
 	
-	public  Cartao createCartao(CartaoApi cartaoApi ,Conta conta1 , Configuration configuration,String nomeCartao, String senha, String cvv  ) throws ApiException 
+	public  Cartao createCartao(CartaoApi cartaoApi ,Conta conta1 , Configuration configuration,myClient client) throws ApiException 
 	{
 		Cartao cartao = new Cartao();
-        cartao = configuration.getConfigurationCartao(nomeCartao,senha,cvv);
+        cartao = configuration.getConfigurationCartao(client.getCartaoNome(),client.getSenha(),client.getCvv());
         cartao = cartaoApi.createUsingPOST(conta1.getId(), cartao);
 		
          return cartao;

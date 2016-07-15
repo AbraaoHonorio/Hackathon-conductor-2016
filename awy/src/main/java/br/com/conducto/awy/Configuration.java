@@ -1,11 +1,7 @@
 package br.com.conducto.awy;
-import br.com.conductor.sdc.api.v1.CartaoApi;
-import br.com.conductor.sdc.api.v1.ContaApi;
 import br.com.conductor.sdc.api.v1.invoker.ApiClient;
-import br.com.conductor.sdc.api.v1.invoker.ApiException;
 import br.com.conductor.sdc.api.v1.invoker.auth.ApiKeyAuth;
 import br.com.conductor.sdc.api.v1.model.Cartao;
-import br.com.conductor.sdc.api.v1.model.Conta;
 
 public class Configuration
 {

@@ -8,6 +8,8 @@ import javax.swing.JPanel;
 import javax.swing.border.EmptyBorder;
 
 import br.com.conducto.awy.myClient;
+import br.com.conductor.sdc.api.v1.invoker.ApiException;
+import br.com.conductor.sdc.api.v1.model.Extrato;
 
 import javax.swing.JLabel;
 import javax.swing.JOptionPane;
@@ -15,6 +17,7 @@ import javax.swing.JTextField;
 import javax.swing.ImageIcon;
 import javax.swing.JButton;
 import java.awt.event.ActionListener;
+import java.util.List;
 import java.awt.event.ActionEvent;
 
 public class Tela_Consulta extends JFrame {
@@ -62,7 +65,7 @@ public class Tela_Consulta extends JFrame {
 		setContentPane(contentPane);
 		contentPane.setLayout(null);
 		
-		JLabel lblIdClient = new JLabel("ID Client");
+		JLabel lblIdClient = new JLabel("Conta: ");
 		lblIdClient.setForeground(Color.WHITE);
 		lblIdClient.setBounds(12, 42, 70, 15);
 		contentPane.add(lblIdClient);
@@ -83,10 +86,24 @@ public class Tela_Consulta extends JFrame {
 			public void actionPerformed(ActionEvent e) {
 				Object source = e.getSource();
 				if (source instanceof JButton){
-					String txt = textField.getText().toString();
+					
+					String txt = textField.getText().toString(); 
 					if(txt.equals(client.getContaNome())){
-						txt = "Cartão: "+client.getContaNome()+"\n"+"Nome: "+client.getCartaoNome();
-						JOptionPane.showMessageDialog(null, txt);	
+						String itxt = "Cartão: "+client.getContaNome()+"\n"+"Nome: "+client.getCartaoNome();
+						 
+						 List<Extrato> extratos = null;
+						try {
+							  extratos = client.getCartaoApi().extratosUsingPOST(client.getConta().getId(), client.getCartao().getId());
+							    for(Extrato e1 : extratos){
+							    	itxt +=e1;
+							    	System.out.println(itxt);
+							    }
+						} catch (ApiException e1) {
+							// TODO Auto-generated catch block
+							e1.printStackTrace();
+						} 
+						//txt += " "+extrato;
+						JOptionPane.showMessageDialog(null, itxt);	
 					} 
 					else{
 						JOptionPane.showMessageDialog(null, "Conta não encontrada");
