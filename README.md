@@ -9,7 +9,7 @@ Equipe: Awy enterprise
 
        Abraão Állysson dos Santos Honório
        Wellton Thyago de Souza
-       Yuri da costa gouveia
+       Yuri da Costa Gouveia
 
        
        
