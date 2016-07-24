@@ -1,12 +1,11 @@
-<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
-	xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
-
-	<modelVersion>4.0.0</modelVersion>
-	<groupId>br.com.conductor.pier</groupId>
-	<artifactId>awy</artifactId>
-	<version>0.0.1-SNAPSHOT</version>
-
-	<repositories>
+<?xml version="1.0" encoding="UTF-8"?>
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+    <modelVersion>4.0.0</modelVersion>
+    <groupId>com.mycompany</groupId>
+    <artifactId>awy-mavenNetBeans</artifactId>
+    <version>1.0-SNAPSHOT</version>
+    <packaging>jar</packaging>
+   <repositories>
 		<repository>
 			<id>jitpack.io</id>
 			<url>https://jitpack.io</url>
@@ -19,6 +18,23 @@
 			<artifactId>sdc-sdk-java</artifactId>
 			<version>1.0.0</version>
 		</dependency>
+	 <dependency>
+	  <groupId>br.com.conductor.sdc</groupId>
+	  <artifactId>sdc-sdk-android</artifactId>
+	  <version>1.0.0</version>
+	  <type>jar</type>
+	 </dependency>
+	 <dependency>
+	  <groupId>br.com.objectos.way</groupId>
+	  <artifactId>mail</artifactId>
+	  <version>0.2.2</version>
+	 </dependency>
+	 <dependency>
+	  <groupId>activation</groupId>
+	  <artifactId>activation</artifactId>
+	  <version>1.0.2</version>
+	  <type>pom</type>
+	 </dependency>
 	</dependencies>
 
 
@@ -38,7 +54,7 @@
 				<configuration>
 					<archive>
 						<manifest>
-							<mainClass>br.com.conducto.awy.Main</mainClass>
+							<mainClass>br.com.conductor.awy.tela.mainWindow</mainClass>
 						</manifest>
 					</archive>
 					<descriptorRefs>
@@ -57,5 +73,4 @@
 			</plugin>
 		</plugins>
 	</build>
-
 </project>
